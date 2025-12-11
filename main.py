@@ -1,19 +1,15 @@
-from core import bot, app
+from core import bot, app, db
+
+from db.crud import create_habit, get_user_by_telegram_id
+from db.init_db import init_db
+from models import User
+
+import handlers.command_handlers
+
 import threading
 
 
-@bot.message_handler(commands=['start'])
-def start_message(message):
-    bot.send_message(message.chat.id, "Привет, это glint — простой трекер привычек\n"
-                     "Давай создадим первую привычку — /create\n\n"
-                     "Помощь по управлению — /help")
-
-
-@bot.message_handler(commands=['help'])
-def help_message(message):
-    bot.send_message(message.chat.id, "В разработке")
-
-
 if __name__ == "__main__":
+    init_db()
     threading.Thread(target=bot.infinity_polling).start()
     threading.Thread(target=app.run).start()

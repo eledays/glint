@@ -5,6 +5,8 @@ from db.models import User
 
 import handlers.command_handlers
 
+import web.routes
+
 import threading
 
 

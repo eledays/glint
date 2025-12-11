@@ -18,7 +18,20 @@
     pip install -r requirements.txt
     ```
 
-3. Запустите приложение
+3. Создайте файл .env и заполните его данными
+
+    ```
+    BOT_TOKEN=your_bot_token
+    DATABASE_URL=your_database_url
+    ```
+
+4. Выполните миграции
+
+    ```
+    alembic upgrade head
+    ```
+
+5. Запустите приложение
 
     ```
     python main.py

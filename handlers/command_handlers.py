@@ -1,6 +1,6 @@
 from core import bot, app, db
 from db.crud import create_habit, get_user_by_telegram_id
-from models import User
+from db.models import User
 
 @bot.message_handler(commands=['start'])
 def start_message(message):

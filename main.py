@@ -1,7 +1,7 @@
 from core import bot, app, db
 
 from db.crud import create_habit, get_user_by_telegram_id
-from models import User
+from db.models import User
 
 import handlers.command_handlers
 

@@ -1,5 +1,5 @@
 from core import db
-from models import Habit, User
+from db.models import Habit, User
 
 
 def create_habit(user_id: int, name: str) -> Habit:

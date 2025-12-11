@@ -20,4 +20,4 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot(token, parse_mode='HTML')
